@@ -22,7 +22,7 @@ const initDb = async () => {
     // 3. Se não houver, criar o administrador inicial a partir do .env
     if (count === 0) {
       const username = process.env.ADMIN_USER || 'admin';
-      const password = process.env.ADMIN_PASSWORD || 'admin';
+      const password = process.env.ADMIN_PASSWORD || 'admin123';
       
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(password, salt);
