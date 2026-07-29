@@ -1,0 +1,23 @@
+:root {
+  --primary: #099de1;
+  --blue-light: #8dceeb;
+  --primary-dark: #148cc4;
+  --text: #7c7c84;
+  --white: #ffffff;
+  --claro: #bbd3de;
+  --muted: #6c757d;
+  --bg: #f4f7fb;
+  --black: #000000;
+
+  --tst: #07060C, #07060C;
+}
+
+
+body {
+   font-family: "Arial Rounded MT Bold", "Arial Rounded MT";
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary)100%);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+

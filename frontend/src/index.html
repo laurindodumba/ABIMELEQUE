@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.css">
+  <title>Início - Encontros que Transformam</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Petit+Formal+Script&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./assets/logo/logo.png" alt="Logo">
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="./pages/sobre.html">Sobre</a></li>
+        <li><a href="./pages/contato.html">Formulário</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero: duas colunas (referência oficial) -->
+    <section class="container-hero relative min-h-screen overflow-hidden flex items-center lg:pt-0">
+      <!-- Background Layering -->
+      <div class="absolute inset-0 z-0">
+        <img src="./assets/image/eqt-bg.jpg" alt=""
+          class="hero-parallax-img absolute inset-0 h-full w-full object-cover brightness-[0.25]"
+          fetchpriority="high" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#099de1]/5 via-[#099de1]/10 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#099de1] via-transparent to-[#099de1]/10"></div>
+        <!-- Corner Glow -->
+        <div class="absolute -right-[10%] -top-[10%] w-[60%] h-[60%] bg-[#FF5700]/20 blur-[120px] rounded-full"></div>
+      </div>
+
+      <div
+        class="relative z-10 mx-auto grid max-w-content gap-10 px-4 py-14 sm:px-5 sm:py-16 md:px-6 lg:grid-cols-2 lg:items-center lg:gap-12 lg:py-12 xl:py-16">
+        <div class="max-w-xl lg:py-8" data-scroll-stagger data-stagger-ms="100">
+          <h1 class="mt-6 text-[clamp(1.55rem,4.5vw,6.55rem)] leading-tight tracking-tight text-white"
+            data-scroll="slide-right">
+            <strong>Conexão </strong>
+            <small class="text-[3rem]">Com Deus, com o próximo e consigo mesmo</small>
+          </h1>
+          <a class="btn btn-primary mt-6 " href="./pages/contato.html">Quero participar</a>
+        </div>
+        <div class="relative flex flex-col items-center lg:items-end" data-scroll="slide-left">
+          <div class="relative w-full  max-w-lg lg:max-w-none">
+            <!-- Glow behind speakers -->
+            <div class="absolute inset-0 bg-gradient-radial from-[#FF5700]/30 to-transparent blur-3xl -z-10"></div>
+            <img src="assets/image/abi.jpg" alt="eqt convidados"
+              class="relative z-[1] w-full max-h-full object-cover rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] ring-1 ring-white/10 [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQT: Layout refinado (Imagem L, Texto R) -->
+    <section class="container-hero relative pt-24  pb-16 lg:py-32">
+      <div class="mx-auto max-w-content px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 lg:items-center gap-16 xl:gap-24">
+          <!-- esquerda: imagem -->
+          <div class="relative" data-scroll="slide-right">
+            <div class="absolute -inset-4 bg-[#099de1]/10 blur-[60px] rounded-full"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#099de1] via-transparent to-[#099de1]/10"></div>
+
+            <img src="assets/image/op1.jpg" alt="Impacto na encontro que Transformam"
+              class="relative z-10 w-full rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.6)] ring-1 ring-white/10" />
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-gold/20 blur-3xl"></div>
+          </div>
+
+          <!-- direita: Content -->
+          <div data-scroll-stagger data-stagger-ms="100">
+            <h2 class="mt-6 
+            text-[clamp(1.75rem,4vw,2.2rem)] font-extrabold leading-[1.15] text-white" data-scroll="slide-up">
+              O crescimento não acontece por acaso. O ambiente em que
+              estás pode impulsionar ou limitar o teu desenvolvimento.
+            </h2>
+            <div class="mt-8 space-y-6 text-base text-white/80 leading-relaxed font-medium" data-scroll="slide-up">
+              <p class="text-boas mb-8">Estás no lugar certo para crescer?</p>
+            </div>
+            <p class="mt-10 
+            text-xl font-bold leading-snug text-white italic border-l-4 border-brand-orange pl-6" data-scroll="blur">
+              Na Conferência “Conexão”, encontrarás um ambiente propício para aprender e crescer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Oradores: 5 colunas, perfil -->
+    <section class="Oradores px-4 py-14 sm:px-5 sm:py-16 md:px-6 md:py-24">
+      <div class="content-o">
+        <h2 class="text-center 
+        text-[clamp(1.1rem,2.8vw,1.65rem)] font-bold leading-snug " data-scroll="fade">
+          Na Conferência Conexão, teremos um tempo de qualidade para sermos desafiados, recebermos as chaves certas e
+          continuarmos a nossa caminhada rumo a um progresso ainda maior.
+        </h2>
+
+        <div class="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-6 lg:gap-6 xl:gap-8" data-scroll-stagger
+          data-stagger-ms="95">
+          <!-- Speaker 1 -->
+          <article class="group" data-scroll="slide-up">
+            <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] ring-1 ring-white/10 shadow-2xl">
+              <img src="assets/image/speakers/AB.jpeg" alt="Ângelo Bié"
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="mt-6 text-center lg:text-left">
+              <h3 class="
+              text-lg font-extrabold uppercase tracking-widest text-brand-gold">
+                Ângelo Bié
+              </h3>
+
+            </div>
+          </article>
+
+          <!-- Speaker 2 -->
+          <article class="group" data-scroll="slide-up">
+            <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] ring-1 ring-white/10 shadow-2xl">
+              <img src="assets/image/speakers/carmen.JPEG" alt="CARMEN MATEIA"
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="mt-6 text-center lg:text-left">
+              <h3 class="
+              text-lg font-extrabold uppercase tracking-widest text-brand-gold">
+                CARMEN MATEIA
+              </h3>
+
+            </div>
+          </article>
+
+          <!-- Speaker 3 -->
+          <article class="group" data-scroll="slide-up">
+            <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] ring-1 ring-white/10 shadow-2xl">
+              <img src="assets/image/speakers/MG.jpeg" alt="MIGUEL ZANGO"
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="mt-6 text-center lg:text-left">
+              <h3 class="
+              text-lg font-extrabold uppercase tracking-widest text-brand-gold">
+                MIGUEL ZANGO
+              </h3>
+            </div>
+          </article>
+
+          <!-- Speaker 4 -->
+          <article class="group" data-scroll="slide-up">
+            <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] ring-1 ring-white/10 shadow-2xl">
+              <img src="assets/image/speakers/AR.jpeg" alt="Avelino Rafael"
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="mt-6 text-center lg:text-left">
+              <h3 class="
+              text-lg font-extrabold uppercase tracking-widest text-brand-gold">
+                Avelino Rafael
+              </h3>
+
+            </div>
+          </article>
+
+          <!-- Speaker 5 -->
+          <article class="group" data-scroll="slide-up">
+            <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] ring-1 ring-white/10 shadow-2xl">
+              <img src="assets/image/speakers/AN.jpeg" alt="Aida Nelson"
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="mt-6 text-center lg:text-left">
+              <h3 class="
+              text-lg font-extrabold uppercase tracking-widest text-brand-gold">
+                Aida Nelson
+              </h3>
+
+            </div>
+          </article>
+
+          <!-- Speaker 6 -->
+          <article class="group" data-scroll="slide-up">
+            <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] ring-1 ring-white/10 shadow-2xl">
+              <img src="assets/image/speakers/BC.jpeg" alt="BERNARDO CHINOIA"
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="mt-6 text-center lg:text-left">
+              <h3 class="
+              text-lg font-extrabold uppercase tracking-widest text-brand-gold">
+                BERNARDO CHINOIA
+              </h3>
+
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <div aria-hidden="true" class="footer-logos bg-white mt-10">
+      <div class="marquee-F">
+        <div class="marquee__group">
+          <img src="assets/image/parceiro/dulce.JPG" alt="dulce">
+          <img src="assets/image/parceiro/ovename.JPG" alt="ovename">
+          <img src="assets/image/parceiro/bon.JPG" alt="bonifik">
+          <img src="assets/image/parceiro/auto.JPG" alt="auto catito">
+          <img src="assets/image/parceiro/mutanha.JPG" alt="mutanha">
+          <img src="assets/image/parceiro/laumy.JPG" alt="laumy">
+         
+        </div>
+        <div aria-hidden="true" class="marquee__group">
+              <img src="assets/image/parceiro/dulce.JPG" alt="dulce">
+          <img src="assets/image/parceiro/ovename.JPG" alt="ovename">
+          <img src="assets/image/parceiro/bon.JPG" alt="bonifik">
+          <img src="assets/image/parceiro/auto.JPG" alt="auto catito">
+          <img src="assets/image/parceiro/mutanha.JPG" alt="mutanha">
+          <img src="assets/image/parceiro/laumy.JPG" alt="laumy">
+         
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-white/10 px-4 py-14 sm:px-5 md:px-6">
+    <div class="mx-auto flex max-w-content flex-col items-center text-center" data-scroll="fade">
+      <div class="logo" style="width: 200px; height: 100px;">
+        <img src="./assets/logo/lobo-branco.png" alt="Logo">
+      </div>
+
+      <p class=" text-xs font-bold uppercase tracking-[0.2em] text-white sm:text-sm">
+        Conferência Anual Encontros Que Transformam
+      </p>
+      <p class="text-white">Copyright &copy; 2026 EqT - <span data-translate="direitos-reservados">Todos os direitos
+          reservados</span>.</p>
+    </div>
+  </footer>
+
+
+  <a href="./pages/admin-login.html">admin</a>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

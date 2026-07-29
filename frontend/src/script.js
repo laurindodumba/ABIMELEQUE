@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       try {
-        const res = await fetch('/api/cadastro', {
+        const API_URL = (window.ENV && window.ENV.API_URL) ? window.ENV.API_URL : 'http://localhost:5000/api';
+        const res = await fetch(`${API_URL}/cadastros`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
