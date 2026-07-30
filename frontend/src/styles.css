@@ -28,10 +28,12 @@
 
 body {
   font-family: "Arial Rounded MT Bold", "Arial Rounded MT";
-  background: linear-gradient(135deg, var(--white) 0%, var(--claro)100%);
+  background: linear-gradient(135deg, var(--white) 0%, var(--claro) 100%);
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .topbar {
@@ -47,14 +49,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 5rem;
+  padding: 5px clamp(1rem, 5vw, 5rem);
   position: relative;
 }
 
 .logo {
   cursor: pointer;
-  height: 70px;
-
+  height: clamp(40px, 8vw, 70px);
 }
 
 .logo img {
@@ -94,11 +95,13 @@ body {
 }
 
 .main-content {
-  min-height: 100vh;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .monsieur-la-doulaise-regular {
@@ -114,11 +117,11 @@ body {
 }
 
 .container-hero {
-  padding: 0 6rem;
+  padding: 0 clamp(1rem, 5vw, 6rem);
 
   strong {
 
-    font-size: 7rem;
+    font-size: clamp(3.5rem, 10vw, 7rem);
     text-transform: uppercase;
 
   }
@@ -151,13 +154,13 @@ body {
   }
 
   .content-o {
-    padding: 0 4rem;
+    padding: 0 clamp(1rem, 4vw, 4rem);
   }
 }
 
 .text-boas {
   font-size: 1.5rem;
-   color: #000000 !important;
+  color: #000000 !important;
 
 }
 
@@ -167,7 +170,7 @@ body {
 }
 
 .titulo {
-  font-size: 2.9rem !important;
+  font-size: clamp(2rem, 5vw, 2.9rem) !important;
 }
 
 .form-card {
@@ -180,6 +183,19 @@ body {
   color: var(--white);
   background-color: transparent;
   border-color: var(--primary);
+}
+
+.btn-primary-login {
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--black);
+  background-color: transparent;
+  border-color: var(--primary);
+}
+
+.nav-links-log a {
+  text-decoration: none;
+  color: var(--black);
 }
 
 .btn-primary:hover {
@@ -197,9 +213,7 @@ body {
   border-color: #dc3545;
 }
 
-.card  {
-  height: 500px;
-}
+.card {}
 
 .image-card {
   overflow: hidden;
@@ -208,7 +222,7 @@ body {
 
 .image-card img {
   width: 100%;
-  height: 500px;
+  height: clamp(300px, 50vh, 500px);
   object-fit: cover;
 }
 
@@ -245,6 +259,10 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   }
 
+  .nav-links a {
+    color: var(--black);
+  }
+
   .nav-links.active {
     display: flex;
   }
@@ -255,6 +273,11 @@ body {
   .nav-links {
     gap: 0.8rem;
     font-size: 0.95rem;
+
+  }
+
+  .nav-links a {
+    color: var(--black);
   }
 }
 
@@ -485,9 +508,65 @@ body {
 }
 
 footer {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary)100%);
-a {
-  text-decoration: none;
-  color: white;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%);
+  padding-bottom: 1rem;
+  /* Ensure some space at the bottom for non-Tailwind pages */
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
+
+.site-footer {
+  padding: 3.5rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.site-footer-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .site-footer-title {
+    font-size: 0.875rem;
+  }
+}
+
+.site-footer-copy {
+  color: white;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 576px) {
+
+  .admin-table th:nth-child(7),
+  .admin-table td:nth-child(7) {
+    display: none;
+    /* Hide long message column on very small screens */
+  }
+
+  .admin-table th,
+  .admin-table td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
 }
