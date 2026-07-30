@@ -197,6 +197,10 @@ body {
   border-color: #dc3545;
 }
 
+.card  {
+  height: 500px;
+}
+
 .image-card {
   overflow: hidden;
   border-radius: 1rem;
@@ -204,7 +208,7 @@ body {
 
 .image-card img {
   width: 100%;
-  height: 280px;
+  height: 500px;
   object-fit: cover;
 }
 
@@ -478,4 +482,12 @@ body {
   to {
     transform: translateX(var(--scroll-end));
   }
+}
+
+footer {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary)100%);
+a {
+  text-decoration: none;
+  color: white;
+}
 }
