@@ -20,7 +20,7 @@ exports.criarCadastro = async (req, res) => {
     return res.status(201).json({ success: true, data: result.rows });
   } catch (err) {
     console.error('Error inserting cadastro:', err);
-    return res.status(500).json({ error: 'Erro interno no servidor' });
+    return res.status(500).json({ error: 'Erro interno no servidor', details: err.message, stack: err.stack });
   }
 };
 

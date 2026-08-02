@@ -42,6 +42,6 @@ exports.login = async (req, res) => {
     return res.status(200).json({ success: true, token });
   } catch (err) {
     console.error('Erro no login do admin:', err);
-    return res.status(500).json({ error: 'Erro interno no servidor' });
+    return res.status(500).json({ error: 'Erro interno no servidor', details: err.message, stack: err.stack });
   }
 };
