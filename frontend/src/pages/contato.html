@@ -37,9 +37,10 @@
 
   <main class="main-content">
     <section class="container contacto mt-5 py-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
-          <div class="card shadow-sm border-0 form-card">
+      <div class="row gx-lg-5 gy-4 justify-content-center">
+        <!-- Coluna do Formulário -->
+        <div class="col-lg-7 order-2 order-lg-1">
+          <div class="card shadow-sm border-0 form-card h-100">
             <div class="card-body p-4 p-md-5">
               <h1 class="h3 mb-2">Entre em contato</h1>
               <p class="text-muted mb-4">Envie sua mensagem e participe das próximas oportunidades.</p>
@@ -88,10 +89,31 @@
                   <div class="invalid-feedback">Escreva sua mensagem.</div>
                 </div>
 
-                <div class="col-12">
-                  <button class="btn btn-primary sent px-4" type="submit">Enviar</button>
+                <div class="col-12 mt-4">
+                  <button class="btn btn-primary sent px-5 w-100 w-sm-auto" type="submit">Enviar</button>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna do pagamento / QR Code -->
+        <div class="col-lg-5 order-1 order-lg-2">
+          <div class="card shadow-sm border-0 form-card h-100">
+            <div class="card-body p-4 p-md-5 text-center d-flex flex-column justify-content-center align-items-center">
+              <h2 class="h4 mb-2">Contribua para o evento</h2>
+              <p class="text-muted mb-4">Escaneie o QR Code abaixo ou utilize o IBAN para realizar a sua transferência.</p>
+
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=0040.0000.1456.0816.1017.3"
+                alt="QR Code para pagamento via IBAN" class="img-fluid mb-4 rounded-3" width="220" height="220">
+
+              <div class="w-100 d-flex flex-column gap-3 justify-content-center align-items-center bg-light p-3 rounded-3">
+                <span id="ibanValue" class="fw-semibold fs-5 tracking-widest text-dark">0040.0000.1456.0816.1017.3</span>
+                <button type="button" class="btn btn-outline-primary px-4 rounded-pill fw-medium" id="copyIbanBtn">
+                  <i class="fa-regular fa-copy me-2"></i>Copiar IBAN
+                </button>
+              </div>
+              <small id="copyFeedback" class="text-success d-block mt-3 d-none fw-medium"><i class="fa-solid fa-check me-1"></i>IBAN copiado com sucesso!</small>
             </div>
           </div>
         </div>
