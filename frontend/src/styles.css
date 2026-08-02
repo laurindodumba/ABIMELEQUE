@@ -186,6 +186,31 @@ body {
 
 }
 
+.video {
+  padding: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.video-wrapper {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 1rem
+}
+
+.responsive-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  display: block
+}
+
 .sent,
 .contacto {
   color: #000000 !important;
@@ -288,18 +313,28 @@ body {
   }
 
   .text-cta {
-  padding: 1rem !important;
+    padding: 1rem !important;
 
-  h2 {
-    text-align: center;
+    h2 {
+      text-align: center;
+      padding: 5px;
+
+    }
+
+    p {
+      text-align: justify;
+      padding: 5px;
+    }
+
   }
 
-  p {
-    text-align: justify;
-    padding: 5px;
-  }
 
-}
+
+  @media (max-width:640px) {
+    .responsive-video {
+      border-radius: .75rem
+    }
+  }
 
   .img-hero {
     padding: 0;
