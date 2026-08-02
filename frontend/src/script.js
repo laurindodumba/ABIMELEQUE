@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       try {
-        const API_URL = (window.ENV && window.ENV.API_URL) ? window.ENV.API_URL : 'http://localhost:5000/api';
+        const API_URL = (window.ENV && window.ENV.API_URL) ? window.ENV.API_URL : 'https://backendeqt.vercel.app/api';
         const res = await fetch(`${API_URL}/cadastros`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

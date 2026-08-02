@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dashboardTable = document.getElementById('cadastrosTableBody');
   const logoutBtn = document.getElementById('logoutBtn');
   const refreshBtn = document.getElementById('refreshBtn');
-  const API_URL = (window.ENV && window.ENV.API_URL) ? window.ENV.API_URL : 'http://localhost:5000/api';
+  const API_URL = (window.ENV && window.ENV.API_URL) ? window.ENV.API_URL : 'https://backendeqt.vercel.app/api';
 
   // Handle Login Page
   if (loginForm) {
