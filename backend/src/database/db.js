@@ -1,9 +1,14 @@
 const { Pool } = require('pg');
 const dotenv = require('dotenv');
-dotenv.config({ path: '.env' }); // Ajuste conforme onde fica o .env
+dotenv.config({ path: '.env' });
+
+let rawUrl = process.env.DATABASE_POSTGRES_URL || process.env.DATABASE_URL || '';
+if (rawUrl.includes('?')) {
+  rawUrl = rawUrl.split('?')[0];
+}
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_POSTGRES_URL_NON_POOLING || process.env.DATABASE_POSTGRES_URL || process.env.DATABASE_URL,
+  connectionString: rawUrl,
   ssl: { rejectUnauthorized: false }
 });
 
