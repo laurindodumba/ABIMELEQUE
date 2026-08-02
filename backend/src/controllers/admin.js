@@ -27,9 +27,15 @@ exports.login = async (req, res) => {
     }
 
     // Gerar token JWT
+    const secret = process.env.DATABASE_SUPABASE_JWT_SECRET || process.env.JWT_SECRET;
+    if (!secret) {
+      console.error('JWT_SECRET não está definido!');
+      return res.status(500).json({ error: 'Erro interno de configuração do servidor' });
+    }
+
     const token = jwt.sign(
       { id: admin.id, user: admin.username },
-      process.env.JWT_SECRET,
+      secret,
       { expiresIn: '2h' }
     );
 

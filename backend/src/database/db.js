@@ -3,9 +3,8 @@ const dotenv = require('dotenv');
 dotenv.config({ path: '.env' }); // Ajuste conforme onde fica o .env
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  // Descomente a linha abaixo se for necessário usar SSL (ex: Render, Heroku)
-  // ssl: { rejectUnauthorized: false }
+  connectionString: process.env.DATABASE_POSTGRES_URL || process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 });
 
 pool.on('connect', () => {
